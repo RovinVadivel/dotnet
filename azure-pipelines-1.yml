@@ -33,3 +33,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: VeracodePipelineScan@0
+  inputs:
+    VeracodeAPIID: '$(vid)'
+    VeracodeAPIsecret: '$(vkey)'
+    fileToScan: '$(System.DefaultWorkingDirectory)//netcoreWebapi/netcoreWebapi.csproj'
+    baselineFileGeneration: true
+    baselineFileStorageProject: 'Sample Project CSharp'
+    baselineFileStorageReponame: 'Sample Project CSharp'
+    baselineFileStorageBranch: 'refs/heads/master'
