@@ -42,3 +42,4 @@ steps:
     baselineFileStorageProject: 'Sample Project CSharp'
     baselineFileStorageReponame: 'Sample Project CSharp'
     baselineFileStorageBranch: 'refs/heads/master'
+    baselineFileOptions: 'standard'
