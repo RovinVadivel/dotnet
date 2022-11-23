@@ -15,11 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+#- task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+#- task: NuGetCommand@2
+#  inputs:
+#    restoreSolution: '$(solution)'
 
 #- task: VSBuild@1
 #  inputs:
@@ -37,7 +37,7 @@ steps:
   inputs:
     VeracodeAPIID: '$(vid)'
     VeracodeAPIsecret: '$(vkey)'
-    fileToScan: '$(System.DefaultWorkingDirectory)//netcoreWebapi/netcoreWebapi.csproj'
+    fileToScan: '$(System.DefaultWorkingDirectory)/netcoreWebapi/netcoreWebapi.csproj'
     baselineFileGeneration: true
     baselineFileStorageProject: 'Sample Project CSharp'
     baselineFileStorageReponame: 'Sample Project CSharp'
